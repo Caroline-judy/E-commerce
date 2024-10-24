@@ -101,37 +101,45 @@ def checkout(request):
 
     return render(request, 'checkout.html')
 
+
+    
 @csrf_exempt
 def handlerequest(request):
-    # paytm will send you post request here
+    # Paytm will send you post request here
     form = request.POST
     response_dict = {}
+    checksum = None  # Initialize checksum before the loop
+
     for i in form.keys():
         response_dict[i] = form[i]
         if i == 'CHECKSUMHASH':
             checksum = form[i]
 
-    verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
-    if verify:
-        if response_dict['RESPCODE'] == '01':
-            print('order successful')
-            a=response_dict['ORDERID']
-            b=response_dict['TXNAMOUNT']
-            rid=a.replace("Sakhi","")
-           
-            print(rid)
-            filter2= Orders.objects.filter(order_id=rid)
-            print(filter2)
-            print(a,b)
-            for post1 in filter2:
-
-                post1.oid=a
-                post1.amountpaid=b
-                post1.paymentstatus="PAID"
-                post1.save()
-            print("run agede function")
+    if checksum:  # Check if checksum has a value
+        verify = Checksum.verify_checksum(response_dict, MERCHANT_KEY, checksum)
+        if verify:
+            if response_dict['RESPCODE'] == '01':
+                print('Order successful')
+                a = response_dict['ORDERID']
+                b = response_dict['TXNAMOUNT']
+                rid = a.replace("Sakhi", "")
+                print(rid)
+                filter2 = Orders.objects.filter(order_id=rid)
+                print(filter2)
+                print(a, b)
+                for post1 in filter2:
+                    post1.oid = a
+                    post1.amountpaid = b
+                    post1.paymentstatus = "PAID"
+                    post1.save()
+                print("Run agede function")
+            else:
+                print('Order was not successful because ' + response_dict['RESPMSG'])
         else:
-            print('order was not successful because' + response_dict['RESPMSG'])
+            print("Checksum verification failed")
+    else:
+        print("Checksum not found in the request")
+
     return render(request, 'paymentstatus.html', {'response': response_dict})
 
 
