@@ -1,0 +1,39 @@
+<!-- subscribe.html -->
+{% extends "base.html" %}
+
+{% block title %}Subscribe to Sakhi's Newsletter{% endblock title %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <!-- Heading with brand style -->
+    <h1>Subscribe to <span style="font-weight: bold; color: #dc3545;">Sakhi's</span> Newsletter</h1>
+    <p style="font-size: 1.2em; color: #999; margin-top: 20px;">
+        Stay updated with the latest trends, exclusive offers, and exciting updates from <strong>Sakhi</strong>.
+    </p>
+
+    {% if is_subscribed %}
+        <!-- Already subscribed message -->
+        <p style="font-size: 1.2em; color: #007bff; margin-top: 40px;">
+            You have already subscribed to our newsletter.
+        </p>
+        <a href="/" style="text-decoration: none; background-color: #007bff; color: white; padding: 12px 24px; border-radius: 5px; font-size: 1.1em; margin-top: 20px; display: inline-block;">
+            Return to Homepage
+        </a>
+    {% else %}
+        <!-- Subscription form -->
+        <form method="post" style="margin-top: 40px;">
+            {% csrf_token %}
+            <button type="submit" style="background-color: #dc3545; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-size: 1.1em;">
+                Subscribe Now
+            </button>
+        </form>
+    {% endif %}
+</div>
+{% endblock content %}
+
+{% block body %}
+<div style="text-align: center; padding: 30px;">
+    <h1>Join the Sakhi Community!</h1>
+    <p style="font-size: 1.2em;">Be the first to know about our latest products and offers.</p>
+</div>
+{% endblock body %}

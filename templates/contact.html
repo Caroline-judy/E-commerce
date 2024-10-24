@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+<!-- Improved Heading with engaging tone -->
+<h1 style="text-align: center; font-weight: bold; margin-top: 40px;">
+    We’re Here to Help! <br> Share Your Concerns About <span style="color: #dc3545;">Sakhi</span> Website
+</h1>
+<p style="text-align: center; font-size: 1.2em; color: #999; margin-top: 15px;">
+    Whether you have feedback, a question, or an issue, we would love to hear from you. 
+</p>
+{% endblock content %}
+
+{% block body %}
+<h1 class="text-center" style="font-weight: bold; margin-top: 20px;">Contact Us</h1>
+
+<div class="container mt-4">
+    <!-- Alert messages for form submission feedback -->
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>{{message}}</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+  
+    <!-- Form section, centered with improved padding -->
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/contact" method="post">
+                {% csrf_token %}
+                
+                <!-- Full Name Field -->
+                <div class="form-group mt-3">
+                    <label for="name" class="form-label" style="font-weight: bold;">Full Name</label>
+                    <input type="text" class="form-control p-2" id="name" name="name" placeholder="Enter your full name" required />
+                </div>
+                
+                <!-- Email Field -->
+                <div class="form-group mt-3">
+                    <label for="email" class="form-label" style="font-weight: bold;">Email</label>
+                    <input type="email" class="form-control p-2" id="email" name="email" placeholder="Enter your email address" value="{{user.email}}" required />
+                </div>
+                
+                <!-- Description/How can I help you? -->
+                <div class="form-group mt-3">
+                    <label for="desc" class="form-label" style="font-weight: bold;">How Can We Assist You?</label>
+                    <textarea class="form-control p-2" id="desc" name="desc" rows="4" placeholder="Describe your issue or inquiry" required></textarea>
+                </div>
+                
+                <!-- Phone Number Field -->
+                <div class="form-group mt-3">
+                    <label for="pnumber" class="form-label" style="font-weight: bold;">Phone Number</label>
+                    <input type="text" class="form-control p-2" id="pnumber" name="pnumber" placeholder="Enter your phone number" required />
+                </div>
+                
+                <!-- Submit Button -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-dark px-5 py-2">Submit</button>
+                </div>
+                
+                <!-- Extra space at the bottom -->
+                <br /><br /><br />
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

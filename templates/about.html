@@ -1,0 +1,216 @@
+{% extends "base.html" %} 
+
+{% load static %}  <!-- Load static files -->
+{% block content %}
+<h1>Meet the Team Behind <span style="font-weight:bold; color:#dc3545;">Sakhi</span> Website</h1>
+{% endblock content %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+    <!-- Hero Section -->
+    <section class="hero-section" style="text-align: center; background-color: #f5f5f5; padding: 50px;">
+        <h1>Welcome to Sakhi</h1>
+        <p>Your one-stop destination for elegant clothing and jewellery.</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" style="padding: 50px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="row">
+                <div class="col" style="float: left; width: 50%;">
+                    <img src="{% static 'assets/img/about-us.jpg' %}" alt="About Us" style="width: 100%; border-radius: 8px;">
+                </div>
+                <div class="col" style="float: right; width: 50%;">
+                    <h2>Our Story</h2>
+                    <p>Sakhi is a boutique-style fashion brand that celebrates timeless elegance with a modern touch. Founded by <strong>Shyni</strong>, our collection reflects a passion for craftsmanship, sustainability, and empowering women.</p>
+                    <p>We offer a curated range of traditional sarees, stylish kurtis, and unique jewellery designed to make every woman feel confident and beautiful.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Values, Vision -->
+    <section class="mission-section" style="background-color: #fafafa; padding: 50px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div class="row">
+                <div class="col" style="float: left; width: 33%;">
+                    <h3>Our Mission</h3>
+                    <p>To empower women through fashion that speaks to their individuality, with a commitment to sustainability and style.</p>
+                </div>
+                <div class="col" style="float: left; width: 33%;">
+                    <h3>Our Values</h3>
+                    <p>We believe in quality, creativity, and customer satisfaction. Our ethical practices and commitment to sustainability guide everything we do.</p>
+                </div>
+                <div class="col" style="float: left; width: 33%;">
+                    <h3>Our Vision</h3>
+                    <p>To expand globally while celebrating our rich heritage and introducing more sustainable fashion options for all occasions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Meet the Team Behind Sakhi Website</h2>
+        <p><span>Dedicated Professionals</span> <span class="description-title">Bringing Fashion to Life</span></p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/caroline-judy-a-316662284/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Caroline Judy A</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/ajay-g-89a353168/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Ajay G</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/anita-irene-630b002a9/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Anita Irene</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/nandana-gireesh-530397199/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Nandana Gireesh</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <!-- Additional Team Members -->
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-5.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/anna-a-mathew-3709ab279/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Anna A Mathew</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="600">
+                    <div class="team-member">
+                        <div class="member-img">
+                            <img src="static/assets/img/team/team-6.jpg" class="img-fluid" alt="">
+                            <div class="social">
+                                <a href="https://www.linkedin.com/in/ashik-c-400635234/"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>Ashik Chandrashekar</h4>
+                        </div>
+                    </div>
+                </div><!-- End Team Member -->
+            </div>
+        </div>
+    </section><!-- /Team Section -->
+
+
+    <!-- Services Section -->
+    <section id="services-section" style="padding: 40px; background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); margin: 20px 0;">
+        <div style="max-width: 800px; margin: auto; text-align: center;">
+            <h2 style="font-size: 2.5em; color: #333; margin-bottom: 20px; font-weight: bold; text-transform: uppercase;">Our Services</h2>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Customized clothing design to fit your personal style.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Exclusive collections of sarees and kurtis for special occasions.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Jewellery that complements your fashion choices.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Personalized shopping experience for our clients.</li>
+            </ul>
+        </div>
+    </section><!-- End Services Section -->
+
+    <!-- Terms of Service Section -->
+    <section id="terms-section" style="padding: 40px; background: #e9f7ef; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); margin: 20px 0;">
+        <div style="max-width: 800px; margin: auto; text-align: center;">
+            <h2 style="font-size: 2.5em; color: #2c3e50; margin-bottom: 20px; font-weight: bold; text-transform: uppercase;">Terms of Service</h2>
+            <p style="font-size: 1.2em; color: #555;">By using our website, you agree to the following terms:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">All purchases are subject to availability.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Prices may change without prior notice.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">Returns and exchanges must be made within 30 days.</li>
+                <li style="background: #ffffff; margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">All personal information will be handled as per our privacy policy.</li>
+            </ul>
+        </div>
+    </section><!-- End Terms of Service Section -->
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy-section" style="padding: 40px; background: #f1c40f; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); margin: 20px 0;">
+        <div style="max-width: 800px; margin: auto; text-align: center;">
+            <h2 style="font-size: 2.5em; color: #ffffff; margin-bottom: 20px; font-weight: bold; text-transform: uppercase;">Privacy Policy</h2>
+            <p style="font-size: 1.2em; color: #ffffff;">Your privacy is important to us. Here’s how we handle your personal information:</p>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="background: rgba(255, 255, 255, 0.9); margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">We do not sell or share your information with third parties.</li>
+                <li style="background: rgba(255, 255, 255, 0.9); margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">We use your information solely to process your orders and improve your shopping experience.</li>
+                <li style="background: rgba(255, 255, 255, 0.9); margin: 15px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); font-size: 1.2em;">You can opt out of marketing communications at any time.</li>
+            </ul>
+        </div>
+    </section><!-- End Privacy Policy Section -->
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Call to Action Section -->
+    <section class="cta-section" style="text-align: center; background-color: #ff6f61; color: white; padding: 50px;">
+        <h2>Join Our Community</h2>
+        <p>Subscribe to our newsletter to stay updated on the latest trends and offers from Sakhi.</p>
+        {% if message %}
+            <p>{{ message }}</p>
+            <p>You will now receive updates from Sakhi.</p>
+        {% else %}
+            <form method="post" action="{% url 'subscribe' %}">  <!-- Add action to the subscribe URL -->
+                {% csrf_token %}
+                <button type="submit" style="background-color: white; color: #ff6f61; padding: 10px 20px; border-radius: 4px; border: none; cursor: pointer;">Subscribe Now</button>
+            </form>
+        {% endif %}
+    </section>
+{% endblock body %}

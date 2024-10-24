@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% load static %}  <!-- Load static files -->
+
+{% block title %}
+    Blog
+{% endblock title %}
+
+{% block content %}
+    <h1>Know More About <span style="font-weight:bold; color:#dc3545;">Sakhi</span> Through Our Blogs</h1>
+{% endblock content %}
+
+{% block body %}
+    <div class="blog-container" style="padding: 50px;">
+        <div class="blog-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+
+            <!-- Blog 1 -->
+            <div class="blog-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="static/assets/img/blog/blog-1.jpg" alt="Blog 1 Image" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h2 style="color: #007bff; font-size: 24px;">Embrace Tradition with Sakhi Boutique: Your Destination for Timeless Elegance</h2>
+                    <p style="font-size: 16px; color: #555;">Discover the essence of tradition and timeless fashion at Sakhi Boutique, where elegance meets heritage. This blog explores how Sakhi Boutique brings a unique blend of classic designs and modern craftsmanship, offering an array of exquisite sarees, kurtis, and jewellery that celebrate the beauty of Indian culture.</p>
+                    <a href="https://medium.com/@nandanasju/embrace-tradition-with-sakhi-boutique-your-destination-for-timeless-elegance-747e8f0da3cc" target="_blank" style="color: #dc3545; text-decoration: none; font-weight: bold;">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog 2 -->
+            <div class="blog-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="static/assets/img/blog/blog-2.jpg" alt="Blog 2 Image" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h2 style="color: #007bff; font-size: 24px;">Team Behind Sakhi: Meet Our Skilled Embroiderers and Tailors</h2>
+                    <p style="font-size: 16px; color: #555;">Get to know the dedicated team behind Sakhi Boutique, where skilled artisans, embroiderers, and tailors bring each design to life. This blog highlights the craftsmanship, passion, and expertise of the people who ensure every piece is crafted with precision and care, delivering the finest quality and personalised service to our customers.</p>
+                    <a href="https://medium.com/@nandanasju/team-behind-sakhi-meet-our-skilled-embroiderers-and-tailors-f1d74b31b471" target="_blank" style="color: #dc3545; text-decoration: none; font-weight: bold;">Read More</a>
+                </div>
+            </div>
+
+            <!-- Blog 3 -->
+            <div class="blog-item" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="static/assets/img/blog/blog-3.jpg" alt="Blog 3 Image" style="width: 100%; height: 200px; object-fit: cover;">
+                <div style="padding: 20px;">
+                    <h2 style="color: #007bff; font-size: 24px;">The Timeless Beauty of Antique Indian Jewelry: A Hidden Gem at Sakhi</h2>
+                    <p style="font-size: 16px; color: #555;">Discover the elegance of antique Indian jewelry at Sakhi Boutique. This blog delves into the cultural heritage and craftsmanship behind these timeless pieces, showcasing their unmatched beauty and the rich history they carry. Explore how Sakhi brings these hidden gems to modern fashion, perfect for those who cherish tradition and elegance.</p>
+                    <a href="https://medium.com/@nandanasju/the-timeless-beauty-of-antique-indian-jewelry-a-hidden-gem-at-sakhi-b0f7b6bcaf68" target="_blank" style="color: #dc3545; text-decoration: none; font-weight: bold;">Read More</a>
+                </div>
+            </div>
+
+            <!-- Add more blog items as needed -->
+        </div>
+    </div>
+{% endblock body %}

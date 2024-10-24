@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}Profile Page{% endblock title %}
+
+{% block content %}
+<h1>Welcome to the Users of <span style="font-weight:bold; color:#dc3545;">Sakhi</span></h1>
+{% endblock content %}
+
+{% block body %}
+<section id="profile" class="profile section">
+    <div class="container section-title" data-aos="fade-up">
+        <h1>My Profile</h1>
+
+        <!-- Orders Table -->
+        <table class="table table-danger table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Products</th>
+                    <th scope="col">Amount Paid</th>
+                    <th scope="col">Payment Status</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Delivery Status</th>
+                    <th scope="col">Delivered</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if orders %}
+                    {% for order in orders %}
+                        <tr>
+                            <th scope="row">{{ order.oid }}</th>
+                            <td>{{ order.name }}</td>
+                            <td>{{ order.items_json }}</td>
+                            <td>{{ order.amount }}</td>
+                            <td>{{ order.paymentstatus }}</td>
+                            <td>{{ order.address1 }}</td>
+
+                            {% if status_updates %}
+                                {% for update in status_updates %}
+                                    <td>{{ update.update_desc }}</td>
+                                    <td>
+                                        {% if update.delivered %}
+                                            <i class="fa-solid fa-circle-check"></i> Delivered
+                                        {% else %}
+                                            <i class="fa-solid fa-truck"></i> Not Delivered
+                                        {% endif %}
+                                    </td>
+                                    <td>{{ update.timestamp }}</td>
+                                {% endfor %}
+                            {% else %}
+                                <td colspan="4">No delivery status available.</td>
+                                <td colspan="4">{{ order.timestamp|default:"N/A" }}</td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="9" class="text-center">No orders placed yet.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock body %}

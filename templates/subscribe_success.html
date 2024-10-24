@@ -1,0 +1,29 @@
+<!-- subscribe_success.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div style="text-align: center; margin-top: 50px;">
+    <!-- Heading with bold brand style -->
+    <h1>Thank You for Subscribing to <span style="font-weight: bold; color: #dc3545;">Sakhi's</span> Newsletter!</h1>
+    <p style="font-size: 1.2em; color: #999; margin-top: 20px;">
+        You’re all set to receive exciting updates, exclusive offers, and the latest trends from <strong>Sakhi</strong>.
+    </p>
+
+    <!-- Call to action for exploring products -->
+    <div style="margin-top: 40px;">
+        <a href="/#portfolio" style="text-decoration: none; background-color: #007bff; color: white; padding: 12px 24px; border-radius: 5px; font-size: 1.1em;">
+            Explore Our Products
+        </a>
+    </div>
+</div>
+{% endblock content %}
+
+{% block title %}Subscription Success | Sakhi{% endblock title %}
+
+{% block body %}
+    <div style="text-align: center; padding: 30px;">
+        <h1>You're Subscribed!</h1>
+        <p style="font-size: 1.2em;">We're excited to keep you updated with all the latest from Sakhi.</p>
+        <a href="/" style="text-decoration: none; font-weight: bold; color: #007bff;">Return to Homepage</a>
+    </div>
+{% endblock body %}
