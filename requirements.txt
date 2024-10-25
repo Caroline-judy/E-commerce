@@ -3,7 +3,7 @@ colorama==0.4.6
 ConfigParser==7.1.0
 cryptography==43.0.3
 Cython==3.0.10
-Django==5.1.2
+Django==4.2.16
 dl==0.1.0
 docutils==0.21.2
 filelock==3.16.1
