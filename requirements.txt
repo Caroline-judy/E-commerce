@@ -3,7 +3,7 @@ colorama==0.4.6
 ConfigParser==7.1.0
 cryptography==43.0.3
 Cython==3.0.10
-Django==5.1.2
+Django==4.2.16
 dl==0.1.0
 docutils==0.21.2
 filelock==3.16.1
@@ -18,7 +18,6 @@ Pillow==11.0.0
 protobuf==5.28.3
 pycryptodome==3.21.0
 pyOpenSSL==24.2.1
-pywin32==306
 railroad==0.5.0
 redis==5.2.0
 Sphinx==8.1.3
